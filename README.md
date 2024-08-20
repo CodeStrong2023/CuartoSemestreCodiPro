@@ -37,14 +37,6 @@
 
 - **Confirma tus cambios:** Asegúrate de estar en tu rama personal y que tus cambios estén confirmados.
 - **Crea una pull request:** Ve a la sección "Pull request" en GitHub y crea una nueva pull request para comparar las ramas que quieres unir.
-
-![menu-repo](/assets/repo_menu.png)
-![creando-pull-request](/assets/tabla_pull_requests.png)
-
 - **Revisa y resuelve conflictos:** Si hay conflictos, resuélvelos de manera colaborativa. Si no, procede a confirmar la pull request y a mergear tu rama con la rama principal.
 
-![confirmando-pull-request](/assets/confirmando_pull_request.png)
-![mergeando-ramas](/assets/Mergeando_ramas.png)
-
 Siguiendo estos pasos, todos en el equipo CodiPro podemos trabajar en nuestras ramas personales, colaborar en el proyecto y luego traer nuestras mejoras a la rama principal de manera sencilla. 🎉# CuartoSemestreCodiPro 🚀
-
