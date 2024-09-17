@@ -30,7 +30,7 @@ productos.forEach(product => {
                 id:product.id,
                 productName: product.productName,
                 price: product.price,
-                quantity: 1, //product.quantity,
+                quantity: product.quantity,
                 img: product.img,    
             });
             displayCartCounter();
@@ -38,5 +38,5 @@ productos.forEach(product => {
         //descomentar si es necesario para depuración
         //console.log(cart)} 
         }
-    });
+});
 });
