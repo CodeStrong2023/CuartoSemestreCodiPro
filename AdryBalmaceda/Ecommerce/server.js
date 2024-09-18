@@ -4,19 +4,19 @@ const app = express();
 const cors = require("cors");
 const path = require("path");
 
-//REPLACE WITH YOUR ACCESS TOKEN AVAILABLE IN: https://developers.mercadopago.com/panel  verificar
+// REPLACE WITH YOUR ACCESS TOKEN AVAILABLE IN: https://developers.mercadopago.com/panel
 mercadopago.configure({
-    access_token: "",
+    access_token: "YOUR_ACCESS_TOKEN_HERE",  // Asegúrate de reemplazar con tu token de acceso
 });
 
-app.use(express.urlencoded({extended: false}));
+app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 
-app.use(express.static(path.join(__dirname, "html-js")));   //la ruta sería: ../../client/html-js
+app.use(express.static(path.join(__dirname, "html-js"))); // La ruta sería: ../../client/html-js
 app.use(cors());
 
 app.get("/", function (req, res) {
-    path.resolve(__dirname, "..", "html-js", "index.html");  //la ruta sería "client" como el anterior comentario
+    res.sendFile(path.resolve(__dirname, "html-js", "index.html")); // Envía el archivo index.html como respuesta
 });
 
 app.post("/create_preference", (req, res) => {
@@ -28,10 +28,10 @@ app.post("/create_preference", (req, res) => {
                 quantity: Number(req.body.quantity),
             },
         ],
-        basck_urls: {
-            success: "http://localhost:8080",
-            failure: "http://localhost:8080",
-            pending: "",
+        back_urls: { // Corregido de basck_urls a back_urls
+            success: "http://localhost:8080/feedback", // URL de éxito corregida
+            failure: "http://localhost:8080/feedback", // URL de fallo corregida
+            pending: "", // Opcional
         },
         auto_return: "approved",
     };
@@ -45,6 +45,7 @@ app.post("/create_preference", (req, res) => {
         })
         .catch(function (error) {
             console.log(error);
+            res.status(500).send("Internal Server Error"); // Enviar una respuesta en caso de error
         });
 });
 
