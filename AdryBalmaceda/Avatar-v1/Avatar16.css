@@ -267,3 +267,9 @@ footer {
     font-size: 2em;
     cursor: pointer;
 }
+
+.close-btn:hover {
+    background-color: 0 0 10px #ff00ff, 0 0 20px #ff00ff, 0 0 30px #ff00ff, 0 0 40px #ff00ff;
+    transform: scale(1.3);
+    transition: all 0.3s ease-in-out; /* Adds a smooth transition */
+}
