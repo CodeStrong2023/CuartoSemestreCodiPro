@@ -1,4 +1,5 @@
-import { loadMercadoPago } from "@mercadopago/sdk-js";
+
+
 
 const modalContainer = document.getElementById("modal-container");
 const modalOverlay = document.getElementById("modal-overlay");
@@ -6,7 +7,7 @@ const modalOverlay = document.getElementById("modal-overlay");
 const cartBtn = document.getElementById("cart-btn");
 const cartCounter = document.getElementById("cart-counter");
 
-const displayCart = () => {
+const displayCart = async () => {
     modalContainer.innerHTML = "";
     modalContainer.style.display = "block";
     modalOverlay.style.display = "block";
@@ -86,22 +87,12 @@ const displayCart = () => {
             <div id="button-checkout"></div>
         `;
         modalContainer.append(modalFooter);
-// mercado pago - ver script en el html linea 31 y averiguar lo siguiente:
-// await loadMercadoPago()
-        const mercadopago = new MercadoPago("public_key", {
+
+        const mp = new window.MercadoPago("YOUR_PUBLIC_KEY", {
             locale: "es-AR",
         });
 
         const checkoutButton = modalFooter.querySelector("#checkout-btn");
-
-        if (checkoutButton) {
-            // Aquí puedes agregar el código para manejar el botón de checkout
-        } else {
-            const modalText = document.createElement("h2");
-            modalText.className = "modal-body";
-            modalText.innerText = "your cart is empty";
-            modalContainer.append(modalText);
-        }
         
         checkoutButton.addEventListener("click", function () {
             checkoutButton.remove();
@@ -128,16 +119,11 @@ const displayCart = () => {
                 });
         });
 
-        function createCheckoutButton(preferenceId) {
-            //Initialize the checkout
+        async function createCheckoutButton(preferenceId) {
             const brickBuilder = mercadopago.bricks();
-
-            const renderComponent = async (bricksBuilder) => {
-                //if (window.checkoutButton) checkoutButton.unmount();
-           
             await brickBuilder.create(
                 "wallet",
-                "button-checkout",  //class/id where the payment button will be displayed
+                "button-checkout",
                 {
                     initialization: {
                         preferenceId: preferenceId,
@@ -148,8 +134,6 @@ const displayCart = () => {
                     },
                 }
             );
-            };
-            window.checkoutButton = renderComponent(bricksBuilder);
         }
 
     } else {
