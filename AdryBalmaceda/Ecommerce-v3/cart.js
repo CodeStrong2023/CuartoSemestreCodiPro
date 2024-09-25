@@ -93,17 +93,9 @@ const displayCart = () => {
         });
 
         const checkoutButton = modalFooter.querySelector("#checkout-btn");
-
-        if (checkoutButton) {
-            // Aquí puedes agregar el código para manejar el botón de checkout
-        } else {
-            const modalText = document.createElement("h2");
-            modalText.className = "modal-body";
-            modalText.innerText = "your cart is empty";
-            modalContainer.append(modalText);
-        }
         
         checkoutButton.addEventListener("click", function () {
+            
             checkoutButton.remove();
 
             const orderData = {
