@@ -1,6 +1,3 @@
-
-
-
 const modalContainer = document.getElementById("modal-container");
 const modalOverlay = document.getElementById("modal-overlay");
 
@@ -26,7 +23,7 @@ const displayCart = async () => {
     });
 
     const modalTitle = document.createElement("div");
-    modalTitle.innerText = "Cart";
+    modalTitle.innerText = "Carrrito";
     modalTitle.className = "modal-title";
     modalHeader.append(modalTitle);
 

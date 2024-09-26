@@ -5,10 +5,11 @@
 
 .card-products {
     text-align: center;
-    display: flex;
-    flex-direction: row;
     justify-content: space-around;
     flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 columnas de igual ancho */
+    gap: 20px; /* Espacio entre elementos */
 }
 
 .card-products img {
@@ -22,7 +23,7 @@
     outline: 0;
     padding: 10px;
     color: white;
-    background-color: #1bcb7f;
+    background-color: #CF7962;
     text-align: center;
     cursor: pointer;
     width: 100%;
@@ -182,8 +183,8 @@
 }
 
 .btn-primary {
-    background-color: #007bff;
-    border-color: #007bff;
+    background-color: #CF7962;
+    border-color: #CF7962;
     color: #ffffff;
     font-size: 14px;
     font-weight: bold;
@@ -194,6 +195,6 @@
 }
 
 .btn-primary hover {
-    background-color: #0069d9;
-    border-color: #0062cc;   
+    background-color: #EFCAC3;
+    border-color: #EFCAC3;   
 }

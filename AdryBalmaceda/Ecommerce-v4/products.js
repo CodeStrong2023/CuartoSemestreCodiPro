@@ -47,5 +47,20 @@ const productos = [
         price: 980,
         quantity: 1,
         img: "kit_textil1.jpg"
+    },
+    {
+        id: 8,
+        productName: "Kits",
+        price: 980,
+        quantity: 1,
+        img: "mascotas_bulldog_frances.jpg"
+    },
+    {
+        id: 9,
+        productName: "Kits",
+        price: 980,
+        quantity: 1,
+        img: "mascotas_salchicha.jpg"
     }
+
 ]
