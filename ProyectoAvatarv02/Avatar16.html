@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Combate Épico - La Leyenda de Aang</title>
+    <link rel="stylesheet" href="Avatar16.css">
+</head>
+
+<body>
+    <div class="game-container">
+        <header>
+            <h1 class="title text-neon" id="main-title">Combate Épico - La Leyenda de Aang</h1>
+        </header>
+
+        <main>
+            <section id="character-selection" class="selection-area">
+                
+                <button class="rules-btn" onclick="showRules()">
+                    <img src="tio iroh.jpg" alt="Reglas" class="rules-img">
+                    <span class="text-neon">Reglas</span>
+                </button>
+                <div id="rules-modal" class="modal">
+                    <div class="modal-content">
+                        <span class="close-btn text-neon" onclick="closeRules()">&times;</span>
+                        <h2 class="text-neon">Reglas del Juego</h2>
+                        <strong>Selección de Personajes:</strong>                        
+                        <p>El jugador elige uno de los cuatro personajes: Aang, Zuko, Katara o Toph.</p>                           
+                        <p>El enemigo es asignado aleatoriamente de entre estos personajes.</p>
+                        <strong>Ataques:</strong>
+                        <p>El jugador elige entre tres ataques: Puño ✊, Patada 🦶 y Barrida 🦵.</p>
+                        <p>El enemigo elige su ataque aleatoriamente.</p>
+                        <strong class="text-neon">Reglas del Combate Épico:</strong>
+                        <p><strong>Empate:</strong> Si ambos eligen el mismo ataque.</p>
+                        <strong>Victoria del Jugador:</strong>
+                        <p>Puño ✊ vence a Barrida 🦵.</p>
+                        <p>Patada 🦶 vence a Puño ✊.</p>
+                        <p>Barrida 🦵 vence a Patada 🦶.</p>
+                        <p><strong>Derrota del Jugador:</strong> Cualquier otra combinación.</p>
+                        <strong>Vidas ❤️❤️❤️:</strong>
+                        <p>Ambos comienzan con 3 vidas ❤️❤️❤️.</p>
+                        <p>Perder un combate disminuye una vida ❤️.</p>
+                        <strong>Fin del Juego:</strong>
+                        <p><strong>Victoria del Jugador:</strong> Enemigo pierde todas sus vidas.</p>
+                        <p><strong>Derrota del Jugador:</strong> Jugador pierde todas sus vidas.</p>
+                        <p>Se deshabilitan los botones de ataque y se muestra un botón para reiniciar el juego.</p>
+                        <strong>Reinicio del Juego:</strong>
+                        <p>El jugador puede reiniciar el juego, recargando la página.</p>
+                        <p class="modal-footer text-neon">¡Diviértete y buena suerte!</p>
+                    </div>
+                </div>
+
+                <h2 class="subtitle text-neon">Elige tu Personaje</h2>
+                <br>
+                <div class="characters">
+                    <button class="character-btn" onclick="selectCharacter('Aang')">
+                        <img src="aang neon.jpg" alt="Aang">
+                        <span class="text-neon">Aang</span>
+                    </button>
+                    <button class="character-btn" onclick="selectCharacter('Zuko')">
+                        <img src="zuko neon.jpg" alt="Zuko">
+                        <span class="text-neon">Zuko</span>
+                    </button>
+                    <button class="character-btn" onclick="selectCharacter('Katara')">
+                        <img src="katara neon.jpg" alt="Katara">
+                        <span class="text-neon">Katara</span>
+                    </button>
+                    <button class="character-btn" onclick="selectCharacter('Toph')">
+                        <img src="toph neon.jpg" alt="Toph">
+                        <span class="text-neon">Toph</span>
+                    </button>
+                </div>
+                                
+            </section>
+
+            <section id="battle-area" class="battle-area" style="display: none;">
+                <div class="battle-info">
+                    <div class="player-info">
+                        <h3 id="player-name" class="text-neon">Jugador</h3>
+                        <div id="player-lives" class="lives">
+                            <span class="heart">❤️</span>
+                            <span class="heart">❤️</span>
+                            <span class="heart">❤️</span>
+                        </div>
+                    </div>
+
+                    <div class="enemy-info">
+                        <h3 class="text-neon">Enemigo</h3>
+                        <div id="enemy-lives" class="lives">
+                            <span class="heart">❤️</span>
+                            <span class="heart">❤️</span>
+                            <span class="heart">❤️</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="attack-selection" class="attack-selection">
+                    <h3 class="subtitle text-neon">Elige tu ataque</h3>
+
+                    <div class="attacks">
+                        <button class="attack-btn" onclick="attack('puño')">
+                            <img src="punio5.jpg" alt="Puño">
+                            <span class="text-neon">Puño</span>
+                        </button>
+                        <button class="attack-btn" onclick="attack('patada')">
+                            <img src="patada5.jpg" alt="Patada">
+                            <span class="text-neon">Patada</span>
+                        </button>
+                        <button class="attack-btn" onclick="attack('barrida')">
+                            <img src="barrida5.jpg" alt="Barrida">
+                            <span class="text-neon">Barrida</span>
+                        </button>
+                    </div>
+                </div>
+
+                <div id="feedback" class="feedback text-neon animated-text"></div>
+                <div id="result" class="result text-neon animated-text"></div>
+
+                <div id="celebration" class="celebration animated" style="display: none;">
+                    <img src="appa.jpg" alt="Celebración" class="celebration-img">
+                </div>
+ 
+                <button id="restart-btn" class="restart-btn" onclick="restartGame('reiniciar')">
+                    <img src="appa.jpg" alt="Reiniciar" class="restart-img">
+                    <span class="text-neon">Reiniciar</span>
+                </button>
+
+                <!-- Sonido de victoria -->
+                <audio id="win-sound">
+                    <source src="appayipyip.mp3" type="audio/mpeg">
+                </audio>
+            </section>
+        </main>
+
+        <footer> 
+            <p class="text-neon">Desarrollado por La Nación del Equipo Codipro</p>
+        </footer>
+    </div>
+
+    <script src="Avatar16.js"></script>
+</body>
+</html>
