@@ -1,5 +1,6 @@
 <h1>
 Proyecto Avatar "Combate Épico - La Leyenda de Aang"</h1>
+<img align='right' src="https://github.com/CodeStrong2023/CuartoSemestreCodiPro/blob/main/ProyectoAvatarv02/fondo%20avatar4.jpg" width="270">
 <strong>
 
 <h2>Introducción</h2>
