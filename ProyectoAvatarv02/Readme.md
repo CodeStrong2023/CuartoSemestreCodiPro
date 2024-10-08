@@ -1,45 +1,46 @@
 <h1>
 Proyecto Avatar "Combate Épico - La Leyenda de Aang"</h1>
+<img align='right' src="https://github.com/CodeStrong2023/CuartoSemestreCodiPro/blob/main/ProyectoAvatarv02/fondo%20avatar4.jpg" width="270">
 <strong>
 
 <h2>Introducción</h2>
 
-Bienvenido al juego "Combate Épico - La Leyenda de Aang", un juego de estrategia y habilidad basado en la popular serie de televisión "Avatar: La Leyenda de Aang". En este juego, podrás elegir a tu personaje favorito y enfrentarte a un enemigo aleatorio en un combate épico.
+Bienvenido al juego "Combate Épico - La Leyenda de Aang", es un juego de estrategia y habilidad donde podrás elegir a tu personaje favorito y enfrentarte a un enemigo en un combate épico.
 
 <h2>Instrucciones para jugar</h2>
 
-Selecciona a tu personaje favorito entre Aang, Zuko, Katara o Toph.
-El enemigo será asignado aleatoriamente.
-Elige uno de los tres ataques disponibles: Puño, Patada o Barrida.
-El enemigo también elegirá un ataque aleatoriamente.
-El resultado del combate se determinará según las reglas del juego.
-El juego continuará hasta que uno de los jugadores pierda todas sus vidas.
+<p>Selecciona a tu personaje favorito entre Aang, Zuko, Katara o Toph.</p>
+<p>El enemigo se asigna al azar.</p>
+<p>Elige uno de los tres ataques disponibles: Puño, Patada o Barrida.</p>
+<p>El enemigo también elige una ataque al azar.</p>
+<p>El resultado del combate se determinará según las reglas del juego.</p>
+<p>El juego continuará hasta que uno de los jugadores pierda todas sus vidas.</p>
 
 <h2>Reglas del juego</h2>
 
-Empate: Si ambos jugadores eligen el mismo ataque.
-Victoria del jugador: Puño vence a Barrida, Patada vence a Puño, Barrida vence a Patada.
-Derrota del jugador: Cualquier otra combinación.
-Vidas: Ambos jugadores comienzan con 3 vidas. Perder un combate disminuye una vida.
+<p>Empate: Si los dos jugadores eligen el mismo ataque.</p>
+<p>Victoria del jugador: Puño vence a Barrida, Patada vence a Puño, Barrida vence a Patada.</p>
+<p>Derrota del jugador: Cualquier otra combinación.</p>
+<p>Vidas: Ambos jugadores comienzan con 3 vidas.</p>
+<p>Cuando se pierde un combate se pierde una vida.</p>
 
 <h2>Funcionalidades del juego</h2>
 
-Seleccionar personaje
-Elegir ataque
-Ver resultado del combate
-Ver vidas restantes
-Reiniciar juego
+<p>Seleccionar el personaje</p>
+<p>Elegir el ataque</p>
+<p>Ver el resultado del combate</p>
+<p>Ver las vidas restantes</p>
+<p>Reiniciar el juego</p>
 
 <h2>Tecnologías utilizadas</h2>
 
-HTML5
-CSS3
-JavaScript
+<p>HTML5</p>
+<p>CSS</p>
+<p>JavaScript</p>
 
 <h2>Requisitos del sistema</h2>
 
-Navegador web compatible con HTML5 y CSS3
-Conexión a Internet para cargar recursos adicionales
+<p>Navegador web compatible con HTML5 y CSS</p>
+<p>Conexión a Internet para cargar recursos adicionales</p>
 
 </strong>
-<strong><br>Enlace a Proyecto Avatar: <a href="https://adrianavb.github.io/ProyectoAvatarv02/">Avatarv02</a></strong>
