@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"> <!-- Corregido -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Comentario eliminado -->
+    <link rel="stylesheet" href="styles.css">  
+    <link rel="stylesheet" href="carrito.css">
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="navbar.css">
+    <link rel="stylesheet" href="product.css">
+    <title>Document</title>
+</head>
+<body>
+    <!-- Logo -->
+    <nav>
+        <div class="left">
+          <span>Hola Mundo Animal 🐶</span>
+        </div>
+        <div class="right">
+          <button id="open-cart">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+              class="size-6">
+              <path stroke-linecap="round" stroke-linejoin="round"
+                d="M15.75 10.5V6a3.75 3.75 0 1 0-7.5 0v4.5m11.356-1.993 1.263 12c.07.665-.45 1.243-1.119 1.243H4.25a1.125 1.125 0 0 1-1.12-1.243l1.264-12A1.125 1.125 0 0 1 5.513 7.5h12.974c.576 0 1.059.435 1.119 1.007ZM8.625 10.5a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm7.5 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Z" />
+            </svg>
+          </button>
+        </div>
+      </nav>
+    
+      <main>
+        <section id="products"></section>
+        <aside id="carrito" class="invisible">
+          <div class="navbar">
+            <span>
+              🐶
+            </span>
+            <button id="close-cart">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                stroke="currentColor" class="size-6">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+              </svg>
+            </button>
+          </div>
+          <div class="container">
+            <span>Carrito vacío 🛒</span>
+          </div>
+        </aside>
+      </main>
+    
+    <!-- Shop content -->
+    <div class="card-products-container">
+        <div class="card-products" id="shopContent"></div>
+    </div>
+
+    <!-- Cart button -->
+    <div class="cart-btn" id="cart-btn">🛒</div>
+    <!-- Cart counter -->
+    <span class="cart-counter" id="cart-counter">0</span>
+    
+
+    <!-- Modal -->
+    <div class="modal-overlay" id="modal-overlay"></div>
+    <div class="modal-container" id="modal-container"></div>
+
+    <!-- Filter section -->
+<section id="filter">
+  <h2>Filtrar productos</h2>
+  <form>
+    <label>Pet type:</label>
+    <select id="pet-type">
+      <option value="">Todos</option>
+      <option value="dog">Perro</option>
+      <option value="cat">Gato</option>
+    </select>
+    <label>Precio:</label>
+    <select id="price-range">
+      <option value="">Todos</option>
+      <option value="0-5000">0 - 5000</option>
+      <option value="5000-10000">5000 - 10000</option>
+      <option value="10000-20000">10000 - 20000</option>
+    </select>
+    <button id="apply-filter">Aplicar filtro</button>
+  </form>
+</section>
+
+<!-- scripts -->
+    <script src="products.js"></script>
+    <script src="index.js"></script>
+    <script src="cart.js"></script>
+    <script src="https://sdk.mercadopago.com/js/v2"></script>
+
+</body>
+</html>
+
