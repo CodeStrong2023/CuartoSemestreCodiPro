@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="styles.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<header> 
+    <div class="logotipo-y-filtro">
+        <div class="logotipo">
+            <img src="HOLA1.PNG" width="150" alt="Logotipo" class="logo-img">
+        </div>
+        <div class="filtro">
+            <label for="filtro"></label>
+            <div class="search-container">
+                <input type="text" id="filtro" placeholder="Busca productos para tu amigo" aria-label="Buscar">
+                <button type="button" aria-label="Buscar producto" id="button">
+                    <h2 class="fas fa-search" id="lupa"></h2>
+                </button>
+            </div>
+        </div>
+    </div>
+
+</header>
+<body>
+    <!---shop content-->
+    <div class="card-products-container">
+        <main>
+        
+        <div class="card-products" id="shopContent"></div>
+        <!--cart btn-->
+        <div class="cart-btn" id="cart-btn">🛒</div>
+        <!--cart counter-->
+        <span class="cart-counter" id="cart-counter">0</span>    
+        <!--modal-->
+        <div class="modal-overlay" id="modal-overlay"></div>
+        <div class="modal-container"id="modal-container"></div>     
+
+        </main>
+
+    </div>
+</body>
+<footer>
+    <h2 class="text-footer">Únete a nuestra comunidad</h2>
+    <form class="formulario-contacto" action="enviar_contacto.php" method="POST">
+        <input type="text" name="nombre" placeholder="Tu Nombre" required>
+        <input type="email" name="email" placeholder="Tu Correo Electrónico" required>
+        <textarea name="mensaje" placeholder="Tu Mensaje" rows="4" required></textarea>
+        <button type="submit">Enviar</button>
+    </form>
+    <p class="text-footer">© 2023 Equipo Codipro. Todos los derechos reservados.</p>
+</footer> 
+
+    <script src="products.js"></script>
+    <script src="index.js"></script>
+    <script src="cart.js"></script>
+    <script src="https://sdk.mercadopago.com/js/v2"></script>
+    <script src="filtro.js"></script>  
+
+</html>
