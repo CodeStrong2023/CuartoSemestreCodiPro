@@ -2,30 +2,32 @@ const express = NodeRequire("express"); //reemplazo require por NodeRequire para
 const app = express();
 const cors = require("cors");
 const mercadopago = require("mercadopago");
-const path = require("path");
+const path = require("path");  //no lo pone el profe
 
 // REPLACE WITH YOUR ACCESS TOKEN AVAILABLE IN: https://developers.mercadopago.com/panel
 mercadopago.configure({
 	access_token:"TEST-1634454575192444-091223-c20ef602c2497325612943683f7cec7f-158012802", 
 });
-// codigo extra agregago 
-app.use("/Ecommerce-v8", express.static(path.join(__dirname, "../Ecommerce-v8"), {
+/* codigo extra agregago 
+app.use("../Ecommerce-v9", express.static(path.join(__dirname, "../Ecommerce-v9, index.html"), {
 	setHeaders: (res) => {
 	  res.setHeader("Content-Type", "text/javascript");
 	},
   }));
-
+fin codigo extra agregado
+*/
 
 
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
-app.use(express.static(path.join(__dirname,"../Ecommerce-v8")))
-app.use("/Ecommerce-v8", express.static(path.join(__dirname, "../Ecommerce-v8")));
+
+app.use(express.static(path.join(__dirname,"../Ecommerce-v9, index.html")))
+//app.use("../Ecommerce-v9", express.static(path.join(__dirname, "../Ecommerce-v9, index.html")));
 app.use(cors());
 
 app.get("/", function () {
-	(path.resolve(__dirname,"..","/Ecommerce-v8","index.html"));
-	es.sendFile(filePath);
+	(path.resolve(__dirname,"../Ecommerce-v9, index.html"));
+	//es.sendFile(filePath);
 });
 
 app.post("/create_preference", (req, res) => {

@@ -78,18 +78,33 @@ const displayCart =() =>{
 
 
     // modal fotter
+    /*
+    en la clase del profe no está la parte del button class
+    */
     const total = cart.reduce((acc,el) => acc + el.price* el.quanty, 0 );
 
     const modalFooter= document.createElement("div");
     modalFooter.className="modal-footer"
     modalFooter.innerHTML=`
     <div class="total-price">${total}:</div>
-    <button class="btn-primary" id="checkout-btn">go to checkout</button>
+
+    <button class="btn-primary" id="checkout-btn">go to checkout</button>  
     <div id="button-checkout"></div>
 
     `;
 
     modalContainer.append(modalFooter);
+    
+    /* en la clase del profe este codigo está acá
+}   else {
+    const modalText=document.createElement("h2");
+    modalText.className="modal-body";
+    modalText.innerText="you cart is empty";
+    modalContainer.append(modalText);
+   }
+
+  };
+     */
 
 // mp;
 // Add SDK credentials
