@@ -5,7 +5,6 @@ function hola(nombre){
             resolve(nombre);
         }, 1000);
     });
-    
 }
 
 function hablar(nombre){
