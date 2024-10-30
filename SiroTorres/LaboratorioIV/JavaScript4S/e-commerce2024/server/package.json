@@ -1,0 +1,19 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "main": "server.js",
+  "scripts": {
+    "start": "nodemon server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "@mercadopago/sdk-react": "^0.0.19",
+    "cors": "^2.8.5",
+    "express": "^4.21.1",
+    "mercadopago": "^2.0.15",
+    "nodemon": "^3.1.7"
+  }
+}
