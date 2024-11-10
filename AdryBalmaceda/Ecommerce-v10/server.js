@@ -6,7 +6,7 @@ const path = require("path");
 
 // REPLACE WITH YOUR ACCESS TOKEN AVAILABLE IN: https://developers.mercadopago.com/panel
 mercadopago.configure({
-	access_token:"APP_USR-3401231501576667-102317-27fafd3581296f35727f84e23aee9acf-2052968273", 
+	access_token:"APP_USR-YOUR ACCESS TOKEN", 
 });
 /* codigo extra agregago para probar 
 app.use("../Ecommerce-v10", express.static(path.join(__dirname, "../Ecommerce-v10"), {
