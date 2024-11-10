@@ -96,7 +96,7 @@ const displayCart =() =>{
     // mp;
     // Add SDK credentials
 // REPLACE WITH YOUR PUBLIC KEY AVAILABLE IN: https://developers.mercadopago.com/panel
-const mercadopago = new MercadoPago("TEST-41970c90-c65f-4b7e-b021-e644e0852c07", {
+const mercadopago = new MercadoPago("TEST-YOUR ACCESS TOKEN", {
     locale: 'es-AR' // The most common are: 'pt-BR', 'es-AR' and 'en-US'
   });
   
