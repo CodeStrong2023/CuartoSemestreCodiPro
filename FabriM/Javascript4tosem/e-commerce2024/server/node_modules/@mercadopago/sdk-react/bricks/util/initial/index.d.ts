@@ -1,0 +1,10 @@
+import { IBrickError } from '../types/common';
+declare const onSubmitDefault: () => Promise<void>;
+declare const onReadyDefault: () => void;
+declare const onErrorDefault: (error: IBrickError) => void;
+declare const onBinChangeDefault: (bin: string) => void;
+declare const onClickEditShippingDataDefault: () => void;
+declare const onClickEditBillingDataDefault: () => void;
+declare const onRenderNextStepDefault: (currentStep: string) => void;
+declare const onRenderPreviousStepDefault: (currentStep: string) => void;
+export { onErrorDefault, onReadyDefault, onSubmitDefault, onBinChangeDefault, onClickEditShippingDataDefault, onClickEditBillingDataDefault, onRenderNextStepDefault, onRenderPreviousStepDefault, };
