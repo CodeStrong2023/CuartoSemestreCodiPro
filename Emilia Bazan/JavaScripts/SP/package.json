@@ -1,0 +1,33 @@
+{
+  "name": "pern-stack",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/index.js",
+  "type": "module",
+  "scripts": {
+    "dev": "nodemon .",
+    "start": "node ."
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^5.1.1",
+    "cookie-parser": "^1.0.0",
+    "cors": "^2.8.5",
+    "express": "^4.21.0",
+    "express-promise-router": "^4.1.1",
+    "jsonwebtoken": "^9.0.2",
+    "md5": "^2.3.0",
+    "morgan": "^1.10.0",
+    "pg": "^8.13.0",
+    "zod": "^3.23.8"
+  },
+  "devDependencies": {
+    "@types/bcrypt": "^5.0.2",
+    "@types/cookie-parser": "^1.4.7",
+    "@types/jsonwebtoken": "^9.0.7",
+    "eslint": "^9.12.0",
+    "nodemon": "^3.1.7"
+  }
+}
