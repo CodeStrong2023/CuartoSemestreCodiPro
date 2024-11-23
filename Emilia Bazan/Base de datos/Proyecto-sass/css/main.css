@@ -1,0 +1,142 @@
+body {
+  background-color: rgb(241, 208, 115);
+  margin: 0px;
+  padding: 0px;
+  font-family: "IBM Plex Sans", sans-serif;
+}
+
+nav {
+  width: auto;
+  display: flex;
+  justify-content: space-between;
+  color: rgb(63, 38, 1);
+  padding: 15px;
+}
+nav p {
+  font-size: 1, 5em;
+  padding-left: 30px;
+}
+nav .icons {
+  display: flex;
+  gap: 15px;
+}
+nav .icons button {
+  background: none;
+  border-style: none;
+}
+
+article {
+  width: auto;
+  color: rgb(63, 38, 1);
+  display: flex;
+  flex-diorection: row;
+  justify-content: space-between;
+  align-item: center;
+  padding-left: 45px;
+  padding-right: 45px;
+  padding-top: 70px;
+}
+article .info-section {
+  display: flex;
+  flex-direction: column;
+  padding-top: 50px;
+  gap: 25px;
+}
+article h1 {
+  font-size: 3em;
+  padding: 0px;
+  margin: 0px;
+}
+article p {
+  font-size: 1, 5em;
+}
+article button {
+  background: none;
+  border-style: none;
+}
+article button {
+  width: 12vw;
+  padding: 20px;
+  background-color: orange;
+  background: none;
+  border-style: none;
+  border-radius: 35px;
+  color: white font-size 1em;
+}
+article img {
+  width: 25vw;
+  border-radius: 19px;
+}
+
+section {
+  width: auto;
+  height: auto;
+  background-color: rgb(214, 201, 176);
+  padding: 60px;
+}
+section h2 {
+  color: rgb(63, 38, 1);
+  font-size: 2em;
+}
+section .section1, section .section2 {
+  padding-bottom: 60px;
+}
+section .section1 h2, section .section2 h2 {
+  font-weight: 300;
+  padding-bottom: 60px;
+}
+section .section1 .card-section, section .section2 .card-section {
+  display: flex;
+  width: auto;
+  height: auto;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: center;
+  column-gap: 200px;
+  row-gap: 200px;
+}
+section .section1 .product-card, section .section2 .product-card {
+  width: 14vw;
+  height: 45vh;
+  background-color: rgb(224, 124, 31);
+  color: rgb(63, 38, 1);
+  padding: 20px;
+  border-radius: 8px;
+}
+section .section1 .product-card .icons, section .section2 .product-card .icons {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  padding-bottom: 12px;
+}
+section .section1 .product-card .icons svg, section .section2 .product-card .icons svg {
+  width: 28px;
+  height: 28px;
+  stroke: olive;
+  stroke-width: yellow;
+}
+section .section1 .product-card .product-image, section .section2 .product-card .product-image {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+section .section1 .product-card .product-image img, section .section2 .product-card .product-image img {
+  width: 12vw;
+  height: 30vh;
+  object-fit: cover;
+  border-radius: 6px;
+}
+section .section2 .product-card {
+  background-color: rgb(226, 226, 154);
+  color: rgb(37, 51, 12);
+}
+
+footer {
+  background-color: orange;
+  width: 100%;
+  height: 250px;
+}
+
+/*# sourceMappingURL=main.css.map */
